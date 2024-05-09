@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Chak-chak</title>
+    <style>
+      body {
+        background-color: #ffebbb;
+        font-family: "Courier New", monospace;
+      }
+
+      .container {
+        max-width: 600px;
+        margin: 0 auto;
+        padding: 30px 60px;
+      }
+
+      h1,
+      h2 {
+        text-align: center;
+      }
+
+      h1 {
+        font-weight: 500;
+        font-size: 40px;
+        line-height: 40px;
+        color: #45171d;
+      }
+
+      h2 {
+        font-weight: 500;
+        font-size: 30px;
+        line-height: 30px;
+        color: #45171d;
+      }
+
+      img {
+        display: block;
+        margin: 0 auto;
+        border-radius: 5px;
+        max-width: 100%;
+      }
+
+      .definition {
+        text-align: left;
+      }
+
+      p {
+        font-size: 18px;
+        font-weight: 500;
+        margin: 30px 30px;
+        color: #45171d;
+      }
+
+      a {
+        text-decoration: none;
+        display: block;
+        margin-top: 10px;
+        color: #f78536;
+        font-weight: 800px;
+        text-align: left;
+      }
+
+      a:hover {
+        text-decoration: underline;
+      }
+
+      hr {
+        border: 1px dotted #45171d;
+      }
+      button {
+        display: block;
+
+        margin: 0 auto;
+        border-radius: 25px;
+        padding: 10px;
+        background-color: #f78536;
+        border: 3px solid #f1d18a;
+        transition: all 200ms ease;
+        cursor: pointer;
+        box-shadow: 5px 5px 10px rgba(186, 124, 16, 0.3);
+        font-weight: 500px;
+      }
+
+      button:hover {
+        background-color: #45171d;
+        color: white;
+        box-shadow: 5px 5px 10px rgba(41, 13, 3, 0.3);
+      }
+
+      .developer {
+        text-align: center;
+        color: #45171d;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <h1>
+        <strong>The Honeyest Desert</strong>
+      </h1>
+      <h2>
+        <strong>Chak-chak</strong>
+      </h2>
+      <img
+        src="https://media.istockphoto.com/id/1170819649/photo/chak-chak-with-honey.jpg?s=170667a&w=0&k=20&c=nPiuMJNBzIAVsi5RFTYpEYJE-Y0Rh5Ok3unrF-WM4Ls="
+        alt="Chak-chak"
+      />
+
+      <p class="definition">
+        Chak-chak is a Tatar sweet. It is particularly popular in Tatarstan and
+        Bashkortostan in Russia. Chak-chak is made out of unleavened dough cut
+        and rolled into hazelnut-sized balls, which are then deep-fried in oil.
+        <br />
+        <br />
+
+        <a href="https://en.wikipedia.org/wiki/%C3%87%C3%A4k%C3%A7%C3%A4k">
+          <strong>Learn more on Wikipedia</strong>
+        </a>
+      </p>
+      <hr />
+      <br />
+      <button>JOIN WORKSHOP</button>
+      <p class="developer">The page was built by 👩🏻‍💻 Liliia Gimaeva</p>
+      <script>
+        function contactInfo() {
+          let name = prompt("What is your name?");
+          let email = prompt("What is your email?");
+          let h1 = document.querySelector("h1");
+          let format = prompt(
+            "Will you join the cooking workshop online or onsite?"
+          )
+            .toLowerCase()
+            .trim();
+          if (format === "online") {
+            h1.innerHTML = "Hello " + name + "! See you at the workshop💻👩‍🍳";
+          } else {
+            h1.innerHTML = "Hello " + name + "! See you at the workshop👩‍🍳";
+          }
+        }
+
+        let joinButton = document.querySelector("button");
+        joinButton.addEventListener("click", contactInfo);
+      </script>
+    </div>
+  </body>
+</html>
